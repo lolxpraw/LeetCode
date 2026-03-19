@@ -16,8 +16,8 @@ public:
     TreeNode* sortedListToBST(ListNode* head) {
         vector<int> nums;
         while(head){
-            nums.push_back(head->val);
-            head = head->next;
+            nums.push_back(head->val); // dua gia tri hien tai vao mang nums
+            head = head->next; // di qua gia tri tiep theo
         }
         return bulid(nums, 0, nums.size() - 1);
     }
