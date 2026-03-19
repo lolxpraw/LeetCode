@@ -1,35 +1,15 @@
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+
 class Solution {
 public:
     // Tao ham de quy mang nums
     TreeNode* bulid(vector<int>& nums, int left, int right){
         if(left > right) return nullptr;
 
-        int mid = (left + right) / 2;
+        int mid = (left + right) / 2; // lay phan tu o giua
 
-        TreeNode* root = new TreeNode(nums[mid]);
-        root->left = bulid(nums , left, mid - 1);
-        root->right = bulid(nums, mid + 1, right);
+        TreeNode* root = new TreeNode(nums[mid]); // node cua phan tu giua
+        root->left = bulid(nums , left, mid - 1); // tao cay con o phia ben trai cua mang
+        root->right = bulid(nums, mid + 1, right); // tao cay con o phia ben phai cua mang
 
         return root;
     }
