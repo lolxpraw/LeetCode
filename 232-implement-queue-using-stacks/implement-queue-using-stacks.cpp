@@ -1,4 +1,5 @@
 // Queue : First in first out
+// Stack : Last in first out
 // Vi du mang [1,2,3]
 /*
 push(4) -> [1,2,3,4]
