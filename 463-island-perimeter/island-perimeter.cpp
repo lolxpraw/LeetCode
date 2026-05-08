@@ -2,7 +2,7 @@ class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
         int row = grid.size();
-        if (row == 0) return 0;
+        //if (row == 0) return 0;
         int col = grid[0].size();
         int res = 0;
         
