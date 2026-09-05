@@ -7,6 +7,7 @@ public:
         string row[numRows]; // ex: numRows = 3 => row[0],row[1],row[2]
         int curRow = 0;
         bool goingDown = true;
+        // Lấy từng chữ trong string s để bỏ vào 1 ô
         for(char c : s){
             row[curRow] += c;
             if(curRow == 0) goingDown = true;
